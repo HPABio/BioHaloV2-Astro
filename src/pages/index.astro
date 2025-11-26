@@ -1,26 +1,88 @@
 ---
-import Layout from '@/layouts/main.astro';
-import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
+import Layout from "@/layouts/main.astro";
+import { OrbCard } from "@/components/ui/orb-card";
+import { BackgroundBeamsDemo } from "@/components/BackgroundBeamsDemo.tsx"
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+
+// Sections
+import HeroComponent from "@/components/HeroComponent.astro"
+import EnterEnzymes from "@/components/enterEnzymes.astro";
+import ProblemSection from "@/components/ProblemSection.astro";
+import HalogenSection from "@/components/HalogenSection.astro";
+import PartnerSection from "@/components/PartnerSection.astro"
 ---
 
-<Layout title="BioHalo - Home">
+<Layout title="BioHalo - Landing Page">
 	<main>
-		<div class="flex flex-col items-center justify-center w-screen h-screen bg-amber-700">
-		#links to other pages
-		<a href="/hero">Hero</a>
-		<a href="/componentTestbed">Component Testbed</a>
-		<a href="/backgroundEffects">Background Effects</a>
-		<a href="/cta-01">CTA 01</a>
-		<a href="/features">Features</a>
-		<a href="/stats">Stats</a>
-		<a href="/testimonials">Testimonials</a>
-		<a href="/contact">Contact</a>
-		<h1>Hello World</h1>
+		<div class="relative top-0 left-0 h-full w-screen flex flex-col items-start justify-center overflow-hidden z-10">
+			<HeroComponent/>		
 		</div>
+
+		<!-- Enter Enzymes Section -->
+		<div class="relative top-0 left-0 h-[150vh] w-screen flex items-start justify-center overflow-hidden">
+			<EnterEnzymes />
+		</div>
+
+		<!-- Orb Card Section -->
+		<div class="relative top-0 left-0 h-[150vh] w-screen flex items-start justify-center overflow-hidden">
+			<!-- Orb Card -->
+			<div class="max-w-2xl w-full">
+				<OrbCard
+					client:visible
+					orbPosition="top-right"
+					orbHue={20}
+					orbHoverIntensity={0.3}
+					orbSize={550}
+					orbRimThickness={100}
+					className="w-full overflow-hidden "
+				>
+					<div class="space-y-6">
+						<div class="space-y-2">
+							<h2 class="text-3xl font-bold text-white">
+								Modern Card Component
+							</h2>
+							<p class="text-white/70 text-lg">
+								This card features an interactive orb positioned at
+								the corner, extending beyond the card boundaries.
+								The orb creates depth by layering behind some
+								elements and in front of others.
+							</p>
+						</div>
+						<div class="flex gap-4 pt-4">
+							<button
+								class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/20 transition-colors"
+							>
+								Learn More
+							</button>
+							<button
+								class="px-6 py-3 bg-transparent hover:bg-white/10 text-white rounded-lg border border-white/20 transition-colors"
+							>
+								Explore
+							</button>
+						</div>
+					</div>
+				</OrbCard>
+			</div>
+
+			<!-- <BackgroundBeamsDemo client:visible/> -->
+		</div>
+
+
+			<div class="relative w-full h-full min-h-screen min-w-screen bg-black flex items-center justify-center p-8">
+			</div>
+		<HalogenSection />
+		<ProblemSection />
+			<div class="flex flex-col items-center justify-center w-screen h-screen bg-amber-700">
+			#links to other pages
+			<a href="/hero">Hero</a>
+			<a href="/componentTestbed">Component Testbed</a>
+			<a href="/backgroundEffects">Background Effects</a>
+			<a href="/cta-01">CTA 01</a>
+			<a href="/features">Features</a>
+			<a href="/stats">Stats</a>
+			<a href="/testimonials">Testimonials</a>
+			<a href="/contact">Contact</a>
+			<h1>Hello World</h1>
+			</div>
 	</main>
 </Layout>
