@@ -1,0 +1,51 @@
+---
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { TextHoverEffect } from "./ui/text-hover-effect";
+import FeaturesSectionDemo from "./features-section-demo-2";
+import { TextReveal } from "./ui/text-reveal";
+import { VideoText } from "./ui/video-text";
+import { MorphingText } from "./ui/morphing-text";
+
+
+
+
+---
+<section class="relative w-full min-h-screen bg-neutral-950 text-white overflow-hidden py-24 px-4 sm:px-8">
+  {/* Background Effects - Toxic/Warning Theme */}
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+    <div class="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-green-900/10 rounded-full blur-[120px] mix-blend-screen animate-pulse-slow"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-yellow-900/10 rounded-full blur-[100px] mix-blend-screen"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]"></div>
+  </div>
+
+<TextHoverEffect text="Text Hover Effect" />
+<FeaturesSectionDemo children={["Text 1", "Text 2", "Text 3"]} />
+<TextReveal children="Text Reveal" />
+<VideoText src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" children="Video Text" />
+<MorphingText texts={["Text 1", "Text 2", "Text 3"]} />
+
+
+  <InfiniteMovingCards
+    items={[
+      {
+        quote: "The world's most advanced AI is now available to everyone.",
+        name: "John Doe",
+        title: "CEO, Acme Corp",
+      },
+      {
+        quote: "We are committed to making the world a better place.",
+        name: "Jane Smith",
+        title: "CTO, Tech Innovations",
+      },
+      {
+        quote: "We are dedicated to providing the best possible service to our customers.",
+        name: "Bob Johnson",
+        title: "COO, Global Solutions",
+      },
+    ]}
+    direction="left"
+    speed="normal"
+    pauseOnHover={true}
+    className="mt-16"
+  />
+</section>

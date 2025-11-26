@@ -1,0 +1,99 @@
+---
+import { OrbCard } from '@/components/ui/orb-card';
+---
+
+<section class="relative w-full min-h-screen bg-black text-white overflow-hidden py-24 px-4 sm:px-8">
+  {/* Background Effects */}
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+    <div class="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-[120px] mix-blend-screen animate-pulse-slow"></div>
+    <div class="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[100px] mix-blend-screen"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    {/* Header */}
+    <div class="mb-20 max-w-3xl">
+      <h2 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
+        The <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Invisible</span> Backbone
+      </h2>
+      <p class="text-xl md:text-2xl text-white/70 leading-relaxed font-light">
+        You might know halogens from light bulbs or the periodic table, but most people are not aware of the central part halogenated materials play in our modern society.
+        <br/><br/>
+        <span class="text-white font-medium">Virtually EVERY industry relies on them.</span>
+      </p>
+    </div>
+
+    {/* Grid */}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Card 1: Healthcare */}
+      <OrbCard client:visible className="h-full min-h-[300px]" orbHue={340} orbPosition="top-right">
+        <div class="h-full flex flex-col justify-between relative z-20">
+          <div>
+            <h3 class="text-2xl font-bold mb-2 text-white">Healthcare</h3>
+            <p class="text-white/60 text-sm">Essential in 25% of all pharmaceuticals and medical devices.</p>
+          </div>
+          <div class="mt-8 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+            <div class="text-3xl font-bold text-pink-400">25%</div>
+            <div class="text-xs text-white/50 uppercase tracking-wider">Global Pharma</div>
+          </div>
+        </div>
+      </OrbCard>
+
+      {/* Card 2: Electronics */}
+      <OrbCard client:visible className="h-full min-h-[300px]" orbHue={160} orbPosition="bottom-left">
+        <div class="h-full flex flex-col justify-between relative z-20">
+          <div>
+            <h3 class="text-2xl font-bold mb-2 text-white">Electronics</h3>
+            <p class="text-white/60 text-sm">Critical insulation for microchips and circuit boards.</p>
+          </div>
+          <div class="mt-8 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+            <div class="text-3xl font-bold text-cyan-400">100%</div>
+            <div class="text-xs text-white/50 uppercase tracking-wider">High-End Chips</div>
+          </div>
+        </div>
+      </OrbCard>
+
+      {/* Card 3: Energy */}
+      <OrbCard client:visible className="h-full min-h-[300px]" orbHue={260} orbPosition="top-left">
+        <div class="h-full flex flex-col justify-between relative z-20">
+          <div>
+            <h3 class="text-2xl font-bold mb-2 text-white">Energy</h3>
+            <p class="text-white/60 text-sm">Vital for solar panels, wind turbines, and batteries.</p>
+          </div>
+          <div class="mt-8 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+            <div class="text-3xl font-bold text-purple-400">Vital</div>
+            <div class="text-xs text-white/50 uppercase tracking-wider">Green Tech</div>
+          </div>
+        </div>
+      </OrbCard>
+
+      {/* Card 4: Construction */}
+      <OrbCard client:visible className="h-full min-h-[300px]" orbHue={0} orbPosition="bottom-right">
+        <div class="h-full flex flex-col justify-between relative z-20">
+          <div>
+            <h3 class="text-2xl font-bold mb-2 text-white">Construction</h3>
+            <p class="text-white/60 text-sm">Fire retardants, insulation, and durable piping.</p>
+          </div>
+          <div class="mt-8 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+            <div class="text-3xl font-bold text-white">Global</div>
+            <div class="text-xs text-white/50 uppercase tracking-wider">Infrastructure</div>
+          </div>
+        </div>
+      </OrbCard>
+    </div>
+  </div>
+</section>
+
+<style>
+  .animate-pulse-slow {
+    animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+</style>

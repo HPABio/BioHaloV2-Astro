@@ -1,0 +1,95 @@
+---
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { CardSpotlight } from "@/components/ui/card-spotlight";
+import { CardStack } from "./ui/card-stack";
+import { GlareCard } from "./ui/glare-card";
+import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import { MacbookScroll } from "./ui/macbook-scroll";
+
+const testimonials = [
+    {
+        quote: "The world's most advanced AI is now available to everyone.",
+        name: "John Doe",
+        title: "CEO, Acme Corp",
+    },
+    {
+        quote: "We are committed to making the world a better place.",
+        name: "Jane Smith",
+        title: "CTO, Tech Innovations",
+    },
+    {
+        quote: "We are dedicated to providing the best possible service to our customers.",
+        name: "Bob Johnson",
+        title: "COO, Global Solutions",
+    },
+];
+
+const cardStackItems = testimonials.map((t, i) => ({
+    id: i,
+    name: t.name,
+    designation: t.title,
+    content: t.quote,
+}));
+
+const stickyScrollContent = testimonials.map((t) => ({
+    title: t.name,
+    description: t.quote,
+    content: t.title,
+}));
+---
+
+<section
+    class="relative w-full min-h-screen h-[450vh] bg-neutral-950 text-white overflow-hidden py-24 px-4 sm:px-8"
+>
+    {/* Background Effects - Toxic/Warning Theme */}
+   
+<div class="mt-16 w-full h-[75vh] border-2 border-red-500">
+
+  <InfiniteMovingCards
+  items={testimonials}
+  direction="left"
+  speed="normal"
+  pauseOnHover={true}
+  className="mt-16"
+  client:visible
+/>
+</div>
+
+    <div class="mt-16 w-full h-[75vh] flex flex-wrap gap-8 justify-center">
+        {
+            testimonials.map((t) => (
+                <CardSpotlight className="w-96 h-96" client:visible>
+                    <div class="relative z-20">
+                        <p class="text-xl font-bold text-white">{t.quote}</p>
+                        <p class="text-neutral-300 mt-4">{t.name}</p>
+                        <p class="text-neutral-400 text-sm">{t.title}</p>
+                    </div>
+                </CardSpotlight>
+            ))
+        }
+    </div>
+    <div class="mt-16 w-full flex justify-center h-[75vh]"> 
+        <CardStack items={cardStackItems} client:visible />
+    </div>
+    <div class="mt-16 w-full flex flex-wrap gap-8 justify-center h-[75vh]">
+        {
+            testimonials.map((t) => (
+                <GlareCard
+                    className="flex flex-col items-center justify-center p-6"
+                    client:visible
+                >
+                    <p class="text-lg font-bold text-white mb-4">{t.quote}</p>
+                    <p class="text-neutral-300">{t.name}</p>
+                    <p class="text-neutral-400 text-sm">{t.title}</p>
+                </GlareCard>
+            ))
+        }
+    </div>
+    <div class="mt-16 w-full h-[75vh]">
+        <StickyScroll content={stickyScrollContent} client:visible />
+    </div>
+    <div class="mt-16 w-full h-[75vh]">
+        <MacbookScroll title="BioHalo Technology" client:visible />
+    </div>
+</section>
+

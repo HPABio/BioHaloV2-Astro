@@ -1,0 +1,21 @@
+---
+import LayoutPlaygroundOne from "./LayoutPlaygroundOne.astro"
+import LayoutPlaygroundTwo from "./LayoutPlaygroundTwo.astro"
+import LayoutPlaygroundThree from "./LayoutPlaygroundThree.astro"
+---
+
+
+<section class="flex flex-col items-center justify-center relative w-screen min-h-screen text-white overflow-hidden py-24 px-4 sm:px-8">
+    <div class="relative flex flex-col gap-8 w-full min-h-[400vh] pt-[100px]">
+	
+		<div class="relative w-full h-[150vh] w-screen flex items-start justify-center overflow-hidden bg-black/30">
+			<LayoutPlaygroundOne/>
+		</div>
+		<div class="relative w-full h-[150vh] w-screen flex items-start justify-center overflow-hidden bg-black/30">
+			<LayoutPlaygroundTwo/>
+		</div>
+		<div class="relative w-full h-[150vh] w-screen flex items-start justify-center overflow-hidden bg-black/30">
+			<LayoutPlaygroundThree/>
+		</div>
+	</div>
+</section>

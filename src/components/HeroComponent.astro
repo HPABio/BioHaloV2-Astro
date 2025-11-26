@@ -1,0 +1,39 @@
+---
+import ColorBends from "./ColorBends.tsx";
+import HeroContent from "./hero.tsx";   
+import FoverMaterials from "./foreverMaterials.astro";
+
+---
+
+<section>
+
+	<div class="relative h-[1000px] w-screen bg-black ">
+		<ColorBends
+		client:load
+		className="absolute top-0 left-0 w-full h-full"
+		colors={["#ff5c7a", "#8a5cff", "#00ffd1"]}
+		rotation={0}
+		speed={0.2}
+		scale={1}
+		frequency={1.05 /* Good values are 1.02, 1.03, 1.04 */}
+		warpStrength={1 /* Good values are 1, 1.1, 1.2 */}
+		mouseInfluence={0.35}
+		parallax={0}
+		noise={0.1}
+		transparent={true}
+		/>
+		
+		<!-- Background Gradient to top -->
+        <div class="absolute bottom-0 left-0 h-[50vh] w-screen overflow-hidden bg-gradient-to-t from-black to-transparent"/>
+	</div>
+	
+	<!-- Hero Section with backdrop blur -->
+    <div class="absolute top-0 left-0 h-[1000px] w-screen overflow-hidden bg-black/30 backdrop-blur-lg flex items-end justify-center">
+		<div class="absolute top-0 left-0 h-screen min-h-[700px] w-screen overflow-hidden px-16">
+			<HeroContent client:visible />
+		</div>
+	</div>
+	<div class="hidden md:block relative w-full h-full min-h-screen min-w-screen flex items-center justify-center p-8 -mt-[350px]">
+		<FoverMaterials />
+	</div>
+</section>
