@@ -32,7 +32,7 @@ import {
     useMotionValue,
     useTransform,
     type Variants,
-} from "motion/react";
+} from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
@@ -43,14 +43,14 @@ interface BentoItem {
     icons?: boolean;
     href?: string;
     feature?:
-        | "chart"
-        | "counter"
-        | "code"
-        | "timeline"
-        | "spotlight"
-        | "icons"
-        | "typing"
-        | "metrics";
+    | "chart"
+    | "counter"
+    | "code"
+    | "timeline"
+    | "spotlight"
+    | "icons"
+    | "typing"
+    | "metrics";
     spotlightItems?: string[];
     timeline?: Array<{ year: string; event: string }>;
     code?: string;
@@ -558,9 +558,9 @@ function AIInput_Voice() {
                             style={
                                 submitted && isClient
                                     ? {
-                                          height: `${20 + Math.random() * 80}%`,
-                                          animationDelay: `${i * 0.05}s`,
-                                      }
+                                        height: `${20 + Math.random() * 80}%`,
+                                        animationDelay: `${i * 0.05}s`,
+                                    }
                                     : undefined
                             }
                         />

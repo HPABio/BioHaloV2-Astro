@@ -1,6 +1,6 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { useMotionValue, animate, motion } from 'motion/react';
+import { useMotionValue, animate, motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import useMeasure from 'react-use-measure';
 
@@ -79,15 +79,15 @@ export function InfiniteSlider({
 
   const hoverProps = speedOnHover
     ? {
-        onHoverStart: () => {
-          setIsTransitioning(true);
-          setCurrentSpeed(speedOnHover);
-        },
-        onHoverEnd: () => {
-          setIsTransitioning(true);
-          setCurrentSpeed(speed);
-        },
-      }
+      onHoverStart: () => {
+        setIsTransitioning(true);
+        setCurrentSpeed(speedOnHover);
+      },
+      onHoverEnd: () => {
+        setIsTransitioning(true);
+        setCurrentSpeed(speed);
+      },
+    }
     : {};
 
   return (
