@@ -78,7 +78,16 @@ export function FeaturesSection() {
                 strokeLinecap="round"
               />
             </svg> */}
-            <AtomDiagram color="white"/>
+            {/* Element icon */}
+            <div className="relative w-28 h-28 rounded-lg bg-gradient-to-br from-cyan-900/20 to-cyan-950/80 border border-cyan-500/20 flex flex-col items-center justify-center shadow-2xl shadow-cyan-900/20 overflow-hidden">
+              <AtomDiagram color="white" className="absolute -top-6 -right-6 w-24 h-24 opacity-5 rotate-12 pointer-events-none" />
+              <div className="w-full px-3 flex justify-between absolute top-2">
+                <span className="text-xs font-mono text-cyan-400">9</span>
+                <span className="text-[10px] font-mono text-cyan-600">18.998</span>
+              </div>
+              <div className="text-5xl font-bold text-cyan-100 mt-2">F</div>
+              <div className="text-[10px] font-medium tracking-widest text-cyan-500 uppercase">Fluorine</div>
+            </div>  
           </div>
         </div>
 

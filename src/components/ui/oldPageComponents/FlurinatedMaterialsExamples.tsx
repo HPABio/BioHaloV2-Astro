@@ -13,6 +13,7 @@ import BioFMonomerAllPink from "@/assets/figures_and_graphics/BioHalo Figures (l
 import HalogenLampGeminiFutureV2 from "@/assets/images/HalogenLampGeminiFutureV2.png";
 import HalogenLampGemini from "@/assets/images/HalogenLampGemini.png";
 import { useRef } from "react";
+import Silk from "@/components/Silk";
 
 // Function to generate random brightness values
 const generateBrightnessValues = (count: number, min: number, max: number) => {
@@ -24,6 +25,81 @@ const generateBrightnessValues = (count: number, min: number, max: number) => {
     return `blur(0px) brightness(${brightness.toFixed(2)})`;
   });
 };
+
+export function PFASTile() {
+  const ref = useRef<HTMLDivElement>(null);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      const distanceX = event.clientX - centerX;
+      const distanceY = event.clientY - centerY;
+
+      const maxDistance = Math.sqrt(
+        (rect.width / 2) ** 2 + (rect.height / 2) ** 2
+      );
+      const currentDistance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
+      const normalizedDistance = Math.min(1, currentDistance / maxDistance);
+
+      // Map normalizedDistance (0 at center, 1 at edge) to brightness (3 at center, 1 at edge)
+      const brightnessValue = 3 - normalizedDistance * 2; // Range from 3 to 1
+
+      mouseX.set(brightnessValue);
+    }
+  };
+
+  const filter = useTransform(
+    mouseX,
+    [1, 3],
+    ["blur(0px) saturate(0) brightness(1)", "blur(0px) saturate(3) brightness(2)"]
+  );
+
+  return (
+    <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
+      <motion.div
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={() => mouseX.set(1)} // Reset brightness when mouse leaves
+        className="w-full h-full relative"
+        style={{
+          filter: filter,
+          transition: "filter 0.1s ease-out", // Smooth transition for brightness change
+        }}
+      >
+       <img
+          src={BioFMonomerAllPink.src}
+          alt="Halogen Lamp"
+          className="w-full h-full object-contain object-center -rotate-[5deg] hue-rotate-[200deg]"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
+          }}
+        />
+        <div className="absolute bottom-8 right-8">
+          <p className="text-sm text-slate-300/50 font-medium font-poppins leading-none">
+            <span className="text-3xl text-tealAccent uppercase font-semibold font-poppins leading-none">
+              Forever Chemicals
+              <br />
+            </span>
+            Perfluoroalkyl and Polyfluoroalkyl Substances 
+            <br />
+            <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60 leading-none">
+              PFAS
+            </span>
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
 
 export function CPUTile() {
   const refCPUText = useRef(null);
@@ -235,7 +311,8 @@ export function AerospaceTile() {
   );
 }
 
-export function PFASTile() {
+
+export function MaterialsTile() {
   const ref = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -265,7 +342,7 @@ export function PFASTile() {
   const filter = useTransform(
     mouseX,
     [1, 3],
-    ["blur(0px) saturate(0) brightness(1)", "blur(0px) saturate(3) brightness(2)"]
+    ["blur(0px) brightness(1)", "blur(0px) brightness(3)"]
   );
 
   return (
@@ -280,10 +357,10 @@ export function PFASTile() {
           transition: "filter 0.1s ease-out", // Smooth transition for brightness change
         }}
       >
-       <img
-          src={BioFMonomerAllPink.src}
+        <img
+          src={JetEngineCloseUpLummiAi.src}
           alt="Halogen Lamp"
-          className="w-full h-full object-contain object-center -rotate-[5deg] "
+          className="w-full h-full object-cover object-center"
         />
         <div
           className="absolute inset-0"
@@ -295,13 +372,13 @@ export function PFASTile() {
         <div className="absolute bottom-8 right-8">
           <p className="text-sm text-slate-300/50 font-medium font-poppins leading-none">
             <span className="text-3xl text-tealAccent uppercase font-semibold font-poppins leading-none">
-              Forever Chemicals
+              aerospace
               <br />
             </span>
-            Perfluoroalkyl and Polyfluoroalkyl Substances 
+            production of
             <br />
             <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60 leading-none">
-              PFAS
+              mechanical high performance parts
             </span>
           </p>
         </div>
@@ -309,7 +386,6 @@ export function PFASTile() {
     </div>
   );
 }
-
 
 
 export function HalogenTile() {

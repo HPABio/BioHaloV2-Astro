@@ -1,17 +1,21 @@
 ---
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import {DottedGlowBackgroundDemo} from "@/components/DottedGlowBackground.tsx";
+
 ---
 
 <section class="relative w-full min-h-screen bg-neutral-950 text-white overflow-hidden py-24 px-4 sm:px-8">
+  <DottedGlowBackgroundDemo />
   {/* Background Effects - Toxic/Warning Theme */}
-  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+  <div class="hidden absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
     <div class="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-green-900/10 rounded-full blur-[120px] mix-blend-screen animate-pulse-slow"></div>
     <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-yellow-900/10 rounded-full blur-[100px] mix-blend-screen"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]"></div>
   </div>
 
-  <div class="max-w-7xl mx-auto relative z-10">
+
+  <div class="hidden max-w-7xl mx-auto relative z-10">
     {/* Header */}
     <div class="mb-20 max-w-4xl mx-auto text-center">
       <h2 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
