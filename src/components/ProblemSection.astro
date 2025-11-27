@@ -30,11 +30,8 @@ import HiddenSkull from "@/components/ui/oldPageComponents/hidden-skull.tsx";
               templates to build stunning modern interfaces.
             </p>
           </div>
-          <HiddenSkull client:visible />
-          <div class="flex flex-col gap-4 sm:flex-row">
-            <button class="inline-flex items-center justify-center rounded-lg border border-neutral-300 bg-white px-8 py-3 text-sm font-medium text-neutral-700 shadow-sm transition-all duration-200 hover:bg-neutral-50 hover:shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700">
-              View Pricing
-            </button>
+          <div class="relative w-full h-full flex flex-col gap-4 sm:flex-row">
+            <HiddenSkull client:only />
           </div>
 
         </div>
