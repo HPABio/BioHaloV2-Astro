@@ -13,7 +13,7 @@ import BioFMonomerAllPink from "@/assets/figures_and_graphics/BioHalo Figures (l
 import HalogenLampGeminiFutureV2 from "@/assets/images/HalogenLampGeminiFutureV2.png";
 import HalogenLampGemini from "@/assets/images/HalogenLampGemini.png";
 import { useRef } from "react";
-import Silk from "@/components/Silk";
+import { SilkBackground } from "@/components/ui/bg-silk";
 
 // Function to generate random brightness values
 const generateBrightnessValues = (count: number, min: number, max: number) => {
@@ -347,27 +347,14 @@ export function MaterialsTile() {
 
   return (
     <div className="w-full h-[400px] relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm border border-white/10">
-      <motion.div
-        ref={ref}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={() => mouseX.set(1)} // Reset brightness when mouse leaves
-        className="w-full h-full relative"
-        style={{
-          filter: filter,
-          transition: "filter 0.1s ease-out", // Smooth transition for brightness change
-        }}
-      >
-        <img
-          src={JetEngineCloseUpLummiAi.src}
-          alt="Halogen Lamp"
-          className="w-full h-full object-cover object-center"
-        />
+      <div className="w-full h-full relative">
+        <SilkBackground className="absolute inset-0 z-0" />
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 z-1"
           style={{
             background:
-              "radial-gradient(circle, transparent 0%, transparent 40%, black 65%, black 100%)",
-          }}
+              "radial-gradient(circle, transparent 0%, transparent 40%, black 85%, black 100%)",
+            }}
         />
         <div className="absolute bottom-8 right-8">
           <p className="text-sm text-slate-300/50 font-medium font-poppins leading-none">
@@ -382,7 +369,7 @@ export function MaterialsTile() {
             </span>
           </p>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

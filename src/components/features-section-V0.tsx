@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Cpu, FlaskConical, Rocket, Lightbulb, ChevronRight, Atom } from "lucide-react"
-import { CPUTile, HalogenTile, SurfactantsTile, AerospaceTile, PFASTile } from "@/components/ui/oldPageComponents/FlurinatedMaterialsExamples.tsx";
+import { CPUTile, HalogenTile, MaterialsTile, SurfactantsTile, AerospaceTile, PFASTile } from "@/components/ui/oldPageComponents/FluorinatedMaterialsExamples";
 import { Button } from "@/components/ui/button"
 import AtomDiagram from "@/components/ui/atom-diagram";
 
@@ -12,17 +12,17 @@ const features = [
     title: "Halogenation",
     description:
       "Specialized components for the production of halogen lamps and other advanced lighting solutions, delivering efficiency and longevity.",
-    component: PFASTile ,
+    component: PFASTile,
   },
-  {
-    id: "lighting",
-    icon: Lightbulb,
-    label: "Lighting",
-    title: "Lighting Industry",
-    description:
-      "Specialized components for the production of halogen lamps and other advanced lighting solutions, delivering efficiency and longevity.",
-    component: HalogenTile,
-  },
+  // {
+  //   id: "lighting",
+  //   icon: Lightbulb,
+  //   label: "Lighting",
+  //   title: "Lighting Industry",
+  //   description:
+  //     "Specialized components for the production of halogen lamps and other advanced lighting solutions, delivering efficiency and longevity.",
+  //   component: HalogenTile,
+  // },
   {
     id: "electronics",
     icon: Cpu,
@@ -35,22 +35,22 @@ const features = [
   {
     id: "surfactants",
     icon: FlaskConical,
-    label: "Surfactants",
-    title: "Surfactants & Coatings",
+    label: "Coatings",
+    title: "Coatings & Fabrics",
     description:
       "Advanced fluorinated surfactants used in the production of high-performance coatings, adhesives, and specialized surface treatments.",
-    component: SurfactantsTile,
+    component: MaterialsTile,
   },
   {
     id: "aerospace",
     icon: Rocket,
     label: "Aerospace",
-    title: "Aerospace Engineering",
+    title: "High-Performance Materials",
     description:
       "Critical materials for the production of mechanical high-performance parts, capable of withstanding extreme conditions in aerospace applications.",
     component: AerospaceTile,
   },
-  
+
 ]
 
 export function FeaturesSection() {
@@ -63,7 +63,7 @@ export function FeaturesSection() {
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-12">
           <div className="w-full">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-balance">Fluorinated Materials</h2>
-            <p className="text-lg text-zinc-400 leading-relaxed">
+            <p className="text-lg text-zinc-400 leading-relaxed max-w-2xl">
               By using holgens like fluorine, the PFAS industry can fluorinate certain polymers to create a wide range of products that are both durable and long-lasting.
             </p>
           </div>
@@ -87,7 +87,7 @@ export function FeaturesSection() {
               </div>
               <div className="text-5xl font-bold text-cyan-100 mt-2">F</div>
               <div className="text-[10px] font-medium tracking-widest text-cyan-500 uppercase">Fluorine</div>
-            </div>  
+            </div>
           </div>
         </div>
 
@@ -101,8 +101,8 @@ export function FeaturesSection() {
                 key={feature.id}
                 onClick={() => setActiveFeature(feature)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all ${isActive
-                    ? "bg-white text-black"
-                    : "bg-zinc-800/50 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-300"
+                  ? "bg-white text-black"
+                  : "bg-zinc-800/50 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-300"
                   }`}
               >
                 <Icon className="w-4 h-4" />
