@@ -7,16 +7,16 @@ import HiddenSkull from "@/components/ui/oldPageComponents/hidden-skull.tsx";
 
 ---
 
-<section class="relative w-full min-h-screen text-white overflow-hidden py-24 px-4 sm:px-8">
+<section class="relative w-full h-full  text-white overflow-hidden py-24 ">
 
 
-  <div class="relative mx-auto flex w-full max-w-7xl items-center justify-center">
+  <div class="relative mx-auto flex w-full w-fullitems-center justify-center">
 
       <div class="relative z-10 flex w-full flex-col items-center justify-between pl-8 text-center md:flex-row 
-      h-[400px] rounded-3xl overflow-hidden backdrop-blur-sm  border border-gray-500/30">
-        <div class="absolute inset-0 flex flex-row items-center justify-between pl-14 bg-linear-to-r from-black via-black to-black/0 ">
+      h-[400px] rounded-3xl overflow-hidden backdrop-blur-sm w-full">
+        <div class="absolute inset-0 flex flex-row items-center justify-between pl-14 bg-linear-to-r from-black via-black to-black/0  ">
 
-          <div class=" min-w-[420px]">
+          <div class=" min-w-[420px] p-14  border border-gray-500/30 rounded-3xl">
             <h2 class="text-center text-4xl font-normal tracking-tight text-neutral-500 sm:text-5xl md:text-left dark:text-neutral-400">
               But forever chemicals {" "}
               <span class="font-bold text-neutral-400">come at a cost</span>?
@@ -26,13 +26,7 @@ import HiddenSkull from "@/components/ui/oldPageComponents/hidden-skull.tsx";
               templates to build stunning modern interfaces.
             </p>
           </div>
-          <div class="relative overflow-hidden w-full h-full flex flex-col sm:flex-row bg-linear-to-r from-black via-black/30 to-transparent">
-            <img src={RainbowBG.src} alt="Rainbow Background" class="w-full h-full object-cover object-right " />
             <HiddenSkull client:load className="mix-blend-color-burn min-w-[420px]" />
-            <div class="absolute w-full inset-0 bg-linear-to-b from-black via-transparent to-black ">
-              <div class="absolute inset-0  w-2/3 h-full mr-auto bg-linear-to-r from-black via-black to-transparent" />
-            </div>
-          </div>
 
         </div>
       </div>

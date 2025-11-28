@@ -359,13 +359,13 @@ export function MaterialsTile() {
         <div className="absolute bottom-8 right-8">
           <p className="text-sm text-slate-300/50 font-medium font-poppins leading-none">
             <span className="text-3xl text-tealAccent uppercase font-semibold font-poppins leading-none">
-              aerospace
+              Fabrics
               <br />
             </span>
-            production of
+            that are extremely 
             <br />
-            <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60 leading-none">
-              mechanical high performance parts
+            <span className="text-md text-white uppercase font-semibold font-poppins opacity-60 leading-none">
+              repellant and durable <span className="text-transparent">----</span>
             </span>
           </p>
         </div>
