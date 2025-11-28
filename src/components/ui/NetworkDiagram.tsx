@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import "@/styles/NetworkDiagram.css";
+// import "@/styles/NetworkDiagram.css";
 
 interface NetworkDiagramProps extends React.SVGProps<SVGSVGElement> {
   animateLines?: boolean;
