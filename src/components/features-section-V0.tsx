@@ -6,12 +6,12 @@ import AtomDiagram from "@/components/ui/atom-diagram";
 
 const features = [
   {
-    id: "halogens",
+    id: "PFAS",
     icon: Atom,
-    label: "Halogens",
-    title: "Halogenation",
+    label: "PFAS",
+    title: "Forever Chemicals",
     description:
-      "Specialized components for the production of halogen lamps and other advanced lighting solutions, delivering efficiency and longevity.",
+      "Named after their long life cycle and extreme durability, Per- and Polyfluoroalkyl Substances (PFAS) are a class of chemicals used in almost every industry.",
     component: PFASTile,
   },
   // {

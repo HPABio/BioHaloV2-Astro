@@ -5,11 +5,11 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import IconToxicSkull from "@/assets/images/iconToxicSkull.png";
 
-export default function HiddenSkull() {
+export default function HiddenSkull({ className }: { className?: string }) {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start end", "center start"],
+        offset: ["start end", "end start"],
     });
 
     return (
@@ -18,7 +18,7 @@ export default function HiddenSkull() {
             style={{
                 opacity: useTransform(scrollYProgress, [0, 1], [0, 1]),
             }}
-            className="absolute -top-4/5 right-0 w-full h-full grid place-items-center mix-blend-color-burn"
+            className={`absolute -top-4/5 right-0 w-full h-full grid place-items-center ${className}`}
         >
             <div className="w-full h-[1200px]">
                 <img

@@ -35,7 +35,7 @@ export default function Hero() {
         
         <p className="mt-6 md:text-lg text-white mix-blend-exclusion leading-none">
           new possibilities for
-          <span className="inline-block text-"><AtomDiagram color="#E6167D" width={25} height={25} className="translate-y-1 ml-1" /></span>
+          <span className="inline-block text-"><AtomDiagram color="#0092B8" width={25} height={25} className="translate-y-1 ml-1" /></span>
           <span className="">fluorine</span>
           -based chemistry thanks to <br />
           our revolutionairy 

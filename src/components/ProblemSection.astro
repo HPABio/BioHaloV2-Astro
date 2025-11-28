@@ -7,20 +7,16 @@ import HiddenSkull from "@/components/ui/oldPageComponents/hidden-skull.tsx";
 
 ---
 
-<section class="relative w-full min-h-screen bg-neutral-950 text-white overflow-hidden py-24 px-4 sm:px-8">
+<section class="relative w-full min-h-screen text-white overflow-hidden py-24 px-4 sm:px-8">
 
 
   <div class="relative mx-auto flex w-full max-w-7xl items-center justify-center">
 
-      <div class="relative z-10 flex w-full flex-col items-center justify-between px-8 text-center md:flex-row 
-      w-full h-[400px] rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm">
-      <div class="absolute inset-0 bg-gradient-to-br from-black/20 to-black/50">
-        <img src={RainbowBG.src} alt="Rainbow Background" class="w-full h-full object-cover object-right translate-x-1/3 translate-y-6 scale-125" />
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black w-full h-full" />
-      </div>
-        <div class="absolute inset-0 flex flex-row items-center justify-between px-14 bg-gradient-to-r from-black via-black to-black/0 ">
+      <div class="relative z-10 flex w-full flex-col items-center justify-between pl-8 text-center md:flex-row 
+      h-[400px] rounded-3xl overflow-hidden backdrop-blur-sm  border border-gray-500/30">
+        <div class="absolute inset-0 flex flex-row items-center justify-between pl-14 bg-linear-to-r from-black via-black to-black/0 ">
 
-          <div>
+          <div class=" min-w-[420px]">
             <h2 class="text-center text-4xl font-normal tracking-tight text-neutral-500 sm:text-5xl md:text-left dark:text-neutral-400">
               But forever chemicals {" "}
               <span class="font-bold text-neutral-400">come at a cost</span>?
@@ -30,8 +26,12 @@ import HiddenSkull from "@/components/ui/oldPageComponents/hidden-skull.tsx";
               templates to build stunning modern interfaces.
             </p>
           </div>
-          <div class="relative w-full h-full flex flex-col gap-4 sm:flex-row">
-            <HiddenSkull client:only />
+          <div class="relative overflow-hidden w-full h-full flex flex-col sm:flex-row bg-linear-to-r from-black via-black/30 to-transparent">
+            <img src={RainbowBG.src} alt="Rainbow Background" class="w-full h-full object-cover object-right " />
+            <HiddenSkull client:load className="mix-blend-color-burn min-w-[420px]" />
+            <div class="absolute w-full inset-0 bg-linear-to-b from-black via-transparent to-black ">
+              <div class="absolute inset-0  w-2/3 h-full mr-auto bg-linear-to-r from-black via-black to-transparent" />
+            </div>
           </div>
 
         </div>

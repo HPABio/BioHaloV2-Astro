@@ -86,13 +86,13 @@ export function PFASTile() {
         <div className="absolute bottom-8 right-8">
           <p className="text-sm text-slate-300/50 font-medium font-poppins leading-none">
             <span className="text-3xl text-tealAccent uppercase font-semibold font-poppins leading-none">
-              Forever Chemicals
+              PFAS
               <br />
             </span>
-            Perfluoroalkyl and Polyfluoroalkyl Substances 
+            used in  
             <br />
             <span className="text-md text-tealAccent uppercase font-semibold font-poppins opacity-60 leading-none">
-              PFAS
+            almost every industry
             </span>
           </p>
         </div>
