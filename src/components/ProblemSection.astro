@@ -12,11 +12,14 @@ import HiddenSkull from "@/components/ui/oldPageComponents/hidden-skull.tsx";
 
   <div class="relative mx-auto flex w-full w-fullitems-center justify-center">
 
+      <!-- Main Container -->
       <div class="relative z-10 flex w-full flex-col items-center justify-between pl-8 text-center md:flex-row 
-      h-[400px] rounded-3xl overflow-hidden backdrop-blur-sm w-full">
-        <div class="absolute inset-0 flex flex-row items-center justify-between pl-14 bg-linear-to-r from-black via-black to-black/0  ">
+      h-[400px] rounded-3xl overflow-hidden backdrop-blur-sm">
 
-          <div class=" min-w-[420px] p-14  border border-gray-500/30 rounded-3xl">
+        <!-- Content Container -->
+        <div class="absolute inset-0 flex flex-row items-center justify-between pl-14 bg-linear-to-r from-black via-black to-black/0  ">
+          <!-- Text Content -->
+          <div class=" min-w-[420px] p-14 border border-gray-500/30 rounded-3xl">
             <h2 class="text-center text-4xl font-normal tracking-tight text-neutral-500 sm:text-5xl md:text-left dark:text-neutral-400">
               But forever chemicals {" "}
               <span class="font-bold text-neutral-400">come at a cost</span>?
@@ -26,8 +29,8 @@ import HiddenSkull from "@/components/ui/oldPageComponents/hidden-skull.tsx";
               templates to build stunning modern interfaces.
             </p>
           </div>
-            <HiddenSkull client:load className="mix-blend-color-burn min-w-[420px]" />
-
+          <!-- Hidden Skull -->
+          <HiddenSkull client:load className="mix-blend-color-burn min-w-[420px]" />
         </div>
       </div>
     </div>

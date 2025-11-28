@@ -1,38 +1,52 @@
 ---
 import Layout from "@/layouts/main.astro";
 import { OrbCard } from "@/components/ui/orb-card";
-import { BackgroundBeamsDemo } from "@/components/BackgroundBeamsDemo.tsx"
-
+import { BackgroundBeamsDemo } from "@/components/BackgroundBeamsDemo.tsx";
 
 // Sections
-import HeroComponent from "@/components/HeroComponent.astro"
+import HeroComponent from "@/components/HeroComponent.astro";
 import EnterEnzymes from "@/components/enterEnzymes.astro";
 import ProblemSection from "@/components/ProblemSection.astro";
 import HalogenSection from "@/components/HalogenSection.astro";
-import PartnerSection from "@/components/PartnerSection.astro"
+import PartnerSection from "@/components/PartnerSection.astro";
+import WhatWeDoSection from "@/components/landing-page/WhatWeDoSection.astro";
+import TechnologySection from "@/components/landing-page/TechnologySection.astro";
+import TeamSection from "@/components/landing-page/TeamSection.astro";
 ---
 
 <Layout title="BioHalo - Landing Page">
-	
-	
-	<div class="relative top-0 left-0 h-full w-screen flex flex-col items-start justify-center overflow-hidden z-10">
-		<HeroComponent/>
-		
+	<div
+		class="relative top-0 left-0 h-full w-screen flex flex-col items-start justify-center overflow-hidden z-10"
+	>
+		<HeroComponent />
 	</div>
 
-	<div class="relative top-0 left-0 h-[150vh] w-screen flex items-start justify-center overflow-hidden">
+	<div
+		class="relative top-0 left-0 h-[150vh] w-screen flex items-start justify-center overflow-hidden"
+	>
 		<ProblemSection />
 	</div>
 
 	<!-- Enter Enzymes Section -->
-	<div class="relative top-0 left-0 h-[150vh] w-screen flex items-start justify-center overflow-hidden">
+	<div
+		class="relative top-0 left-0 h-[150vh] w-screen flex items-start justify-center overflow-hidden"
+	>
 		<EnterEnzymes />
 	</div>
 
+	<!-- What We Do Section -->
+	<WhatWeDoSection />
 
+	<!-- Platform Technology Section -->
+	<TechnologySection />
 
-	<div class="relative top-0 left-0 h-[150vh] w-screen flex items-start justify-center overflow-hidden">
-			<div class="max-w-2xl w-full">
+	<!-- Team Section -->
+	<TeamSection />
+
+	<div
+		class="relative top-0 left-0 h-[150vh] w-screen flex items-start justify-center overflow-hidden"
+	>
+		<div class="max-w-2xl w-full">
 			<OrbCard
 				client:visible
 				orbPosition="top-right"
@@ -70,19 +84,12 @@ import PartnerSection from "@/components/PartnerSection.astro"
 			</OrbCard>
 		</div>
 
-		
 		<!-- <BackgroundBeamsDemo client:visible/> -->
-		</div>
+	</div>
 
-
-	<div class="relative w-full h-full min-h-screen min-w-screen bg-black flex items-center justify-center p-8">
-
-	
-
-		
-
-		
+	<div
+		class="relative w-full h-full min-h-screen min-w-screen bg-black flex items-center justify-center p-8"
+	>
 	</div>
 	<HalogenSection />
-	
 </Layout>

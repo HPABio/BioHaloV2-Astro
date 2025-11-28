@@ -1,0 +1,191 @@
+{
+  "stats": [
+    {
+      "index": 1,
+      "number": "20.63",
+      "prefix": "+",
+      "suffix": "bn $",
+      "label": "Global PFAS Market 2029"
+    },
+    {
+      "number": "23000",
+      "prefix": "+",
+      "label": "Contaminated Sites in Europe"
+    },
+    {
+      "number": "84",
+      "prefix": "+",
+      "suffix": "bn €",
+      "label": "Annual Health Costs"
+    },
+    {
+      "number": "170",
+      "prefix": "+",
+      "suffix": "bn €",
+      "label": "Environmental Remediation Cost"
+    },
+    {
+      "number": "17000",
+      "prefix": "+",
+      "label": "PFAS-Contaminated Sites"
+    },
+    {
+      "number": "2000",
+      "prefix": "+",
+      "suffix": "bn €",
+      "label": "Global Soil Remediation"
+    },
+    {
+      "number": "238",
+      "prefix": "+",
+      "suffix": "bn €",
+      "label": "EU Water Purification"
+    },
+    {
+      "number": "16",
+      "prefix": "+",
+      "suffix": "tn €",
+      "label": "Annual Global PFAS Cost"
+    },
+    {
+      "index": 9,
+      "number": "400",
+      "prefix": "+",
+      "suffix": "°C",
+      "label": "Heat Resistance Capability"
+    },
+    {
+      "index": 10,
+      "number": "50",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Fuel Efficiency Increase"
+    },
+    {
+      "index": 11,
+      "number": "30",
+      "prefix": "-",
+      "suffix": "%",
+      "label": "Friction Reduction"
+    },
+    {
+      "index": 12,
+      "number": "80",
+      "prefix": "+",
+      "suffix": " years",
+      "label": "Product Lifespan Extension"
+    },
+    {
+      "index": 13,
+      "number": "95",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Fire Extinguishing Effectiveness"
+    },
+    {
+      "index": 14,
+      "number": "70",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Water Repellency Rate"
+    },
+    {
+      "index": 15,
+      "number": "60",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Stain Resistance Improvement"
+    },
+    {
+      "index": 16,
+      "number": "40",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Energy Efficiency Boost"
+    },
+    {
+      "index": 17,
+      "number": "200",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Chemical Resistance Increase"
+    },
+    {
+      "index": 18,
+      "number": "25",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Medical Equipment Reliability"
+    },
+    {
+      "index": 19,
+      "number": "500",
+      "prefix": "+",
+      "suffix": " years",
+      "label": "Minimum Degradation Time"
+    },
+    {
+      "index": 20,
+      "number": "3000",
+      "prefix": "+",
+      "suffix": " years",
+      "label": "Maximum Environmental Persistence"
+    },
+    {
+      "index": 21,
+      "number": "99",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Resistance to Degradation"
+    },
+    {
+      "index": 22,
+      "number": "500",
+      "prefix": "+",
+      "suffix": " kJ/mol",
+      "label": "C-F Bond Strength"
+    },
+    {
+      "index": 23,
+      "number": "4.4",
+      "prefix": "+",
+      "suffix": "m tonnes",
+      "label": "PFAS Environmental Release by 2053"
+    },
+    {
+      "index": 24,
+      "number": "85",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "PFOA Removal in 3 Hours"
+    },
+    {
+      "index": 25,
+      "number": "96.9",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "PFNA Destruction in 1 Hour"
+    },
+    {
+      "index": 26,
+      "number": "50",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "PFAS Degradation in 200 Seconds"
+    },
+    {
+      "index": 27,
+      "number": "95",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "PFBA Removal in 8 Hours"
+    },
+    {
+      "index": 28,
+      "number": "99",
+      "prefix": "+",
+      "suffix": "%",
+      "label": "PFAAs Removal in 8 Hours"
+    }
+  ]
+}

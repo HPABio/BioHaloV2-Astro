@@ -32,6 +32,7 @@ export default function HiddenSkull({ className }: { className?: string }) {
             </motion.div>
             <div className="absolute w-full inset-0 bg-linear-to-b from-black via-transparent to-black ">
               <div className="absolute inset-0  w-2/3 h-full mr-auto bg-linear-to-r from-black via-black to-transparent" />
+              <div className="hidden 2xl:block absolute inset-0  w-1/5 h-full ml-auto bg-linear-to-l from-black via-black to-transparent border-2 border-red-500 " />
             </div>
           </div>
         
