@@ -4,7 +4,7 @@ import {
   AccordionItem,
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
-import { Accordion as AccordionPrimitive } from "radix-ui";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { PlusIcon } from "lucide-react";
 
 const faq = [

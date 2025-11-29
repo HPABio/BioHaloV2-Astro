@@ -11,7 +11,7 @@ const features = [
     label: "PFAS",
     title: "Forever Chemicals",
     description:
-      "Named after their long life cycle and extreme durability, Per- and Polyfluoroalkyl Substances (PFAS) are a class of chemicals used in almost every industry.",
+      "Named after their long life cycle and extreme durability, Per- and Polyfluoroalkyl Substances            ) are a class of chemicals used in almost every industry.",
     component: PFASTile,
   },
   // {
@@ -27,9 +27,9 @@ const features = [
     id: "electronics",
     icon: Cpu,
     label: "Electronics",
-    title: "Electronics Production",
+    title: "Microchip Production",
     description:
-      "Essential fluorinated materials for the production of semiconductor wafers, ensuring high performance and reliability in modern electronics.",
+      "Fluorinated materials are essential for the production of semiconductor wafers, ensuring high performance and reliability in modern electronics.",
     component: CPUTile,
   },
   {

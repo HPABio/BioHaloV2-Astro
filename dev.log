@@ -1,0 +1,14 @@
+$ astro dev
+20:15:13 [types] Generated 1ms
+20:15:13 [vite] Port 4321 is in use, trying another one...
+
+ astro  v4.16.19 ready in 148 ms
+
+┃ Local    http://localhost:4322/
+┃ Network  use --host to expose
+
+20:15:13 watching for file changes...
+20:15:33 [ERROR] __vite_ssr_import_6__.default.registerPlugin is not a function
+  Stack trace:
+    at /Users/hendrikcooper/Local Programming/WEBDEV/Projects-webdev/BioHalo/BioHalo-Astro/eval at instantiateModule (file:/Users/hendrikcooper/Local%20Programming/WEBDEV/Projects-webdev/BioHalo/BioHalo-Astro/node_modules/astro/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:53012:24
+    [...] See full stack trace in the browser, or rerun with --verbose.
