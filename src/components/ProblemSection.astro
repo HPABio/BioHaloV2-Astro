@@ -8,14 +8,15 @@ import { InteractiveNebulaShader } from "@/components/ui/liquid-shader";
 import ElectricWavesShader from "@/components/ui/colorful-wave-pattern-1.tsx";
 import LiquidCrystalShader from "@/components/ui/liquid-crystal-shader.tsx";
 import PurpleVelvetHero from "@/components/ui/PurpleVelvetHero.tsx";
-import EternalShadowBackground from "@/components/EternalShadow.astro";
+import EternalShadow from "@/components/EternalShadow.astro";
 ---
 
-<section class="relative w-full h-full text-white overflow-hidden py-24">
+<section class="relative w-full h-full text-white overflow-hidden pb-24">
+  <EternalShadow />
+  <div class="absolute top-0 w-full h-[200px] bg-linear-to-b from-black via-black to-black/0 "/>
   <div
     class="relative w-full h-[600px] flex flex-col items-center justify-center overflow-visible"
   >
-    <EternalShadowBackground client:visible />
     <!-- <PurpleVelvetHero client:visible /> -->
 
   </div>

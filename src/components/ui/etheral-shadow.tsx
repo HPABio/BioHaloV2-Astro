@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useRef, useId, useEffect,type CSSProperties } from 'react';
-import { animate, useMotionValue,type AnimationPlaybackControls } from 'framer-motion';
+import React, { useRef, useId, useEffect, type CSSProperties } from 'react';
+import { animate, useMotionValue, type AnimationPlaybackControls } from 'framer-motion';
+
 
 // Type definitions
 interface ResponsiveImage {
@@ -31,6 +32,7 @@ interface ShadowOverlayProps {
     noise?: NoiseConfig;
     style?: CSSProperties;
     className?: string;
+    children?: React.ReactNode;
 }
 
 function mapRange(
@@ -60,7 +62,8 @@ export function EternalShadowBackground({
     animation,
     noise,
     style,
-    className
+    className,
+    children
 }: ShadowOverlayProps) {
     const id = useInstanceId();
     const animationEnabled = animation && animation.scale > 0;
@@ -175,13 +178,12 @@ export function EternalShadowBackground({
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
+                    mixBlendMode: "screen",
                     textAlign: "center",
                     zIndex: 10
                 }}
             >
-                <h1 className="md:text-7xl text-6xl lg:text-8xl font-bold text-center text-foreground relative z-20">
-                    Etheral Shadows
-                </h1>
+                {children}
             </div>
 
             {noise && noise.opacity > 0 && (

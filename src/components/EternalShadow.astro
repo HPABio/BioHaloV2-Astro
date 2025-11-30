@@ -1,15 +1,91 @@
 ---
 import { EternalShadowBackground } from "@/components/ui/etheral-shadow.tsx";
+import { Star, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 ---
 
 
-<section>
-    <div class="flex w-full h-screen justify-center items-center">
+<section class="h-[300vh] w-full relative">
+    <div class="relative flex w-full h-screen justify-center items-center">
         <EternalShadowBackground client:visible
-        color="rgba(128, 128, 128, 1)"
-        animation={{ scale: 100, speed: 90 }}
+        color="rgba(28, 200, 250, 1)"
+        animation={{ scale: 70, speed: 70 }}
         noise={{ opacity: 1, scale: 1.2 }}
-        sizing="fill"
-        />
+        sizing="fill">
+            <h1 class="md:text-7xl text-6xl 2xl:text-7xl font-bold text-center text-slate-300 relative z-20">
+                But these materials come at a <span class="text-slate-700 mix-blend-none">high cost for the environment</span>
+            </h1>
+        </EternalShadowBackground>
+        <div class="absolute bottom-0 w-full h-[200px] bg-linear-to-t from-black via-black to-black/0 "/>
+    </div>
+    <div class="relative flex w-full h-screen justify-center items-center scale-x-[-1]">
+        <EternalShadowBackground client:visible
+        color="rgba(28, 200, 250, 1)"
+        animation={{ scale: 70, speed: 70 }}
+        noise={{ opacity: 1, scale: 1.2 }}
+        sizing="fill">
+
+      {/* Hero Content */}
+      <div class="relative z-10 flex min-h-[calc(100vh-4rem)] items-center scale-x-[-1]">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-4xl text-center">
+            {/* Badge */}
+            <div class="mb-8 inline-flex items-center rounded-full bg-white/5 backdrop-blur-xl border border-white/10 px-4 py-2 text-sm text-white/90">
+              <Star className="mr-2 h-4 w-4 text-white" />
+              {"Trusted by industry leaders"}
+            </div>
+
+            {/* Main Heading */}
+            <h1 class="mb-6 text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+              Create{" "}
+              <span class="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+                exceptional
+              </span>{" "}
+              experiences
+              <br />
+              that matter
+            </h1>
+
+            {/* Subtitle */}
+            <p class="mb-10 text-lg leading-8 text-white/80 sm:text-xl lg:text-2xl max-w-3xl mx-auto">
+              Transform your ideas into reality with our cutting-edge platform. Designed for creators, built for
+              performance, crafted for excellence.
+            </p>
+
+            {/* CTA Buttons */}
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+              <Button size="lg" className="shadow-2xl shadow-white/25 font-semibold">
+                Start Creating
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button variant="outline" size="lg" className="font-semibold bg-transparent">
+                Learn More
+              </Button>
+            </div>
+
+            {/* Stats */}
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-white mb-2">1M+</div>
+                <div class="text-white/60 text-sm">Users</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-white mb-2">50+</div>
+                <div class="text-white/60 text-sm">Countries</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-white mb-2">24/7</div>
+                <div class="text-white/60 text-sm">Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Gradient Overlay for better text readability */}
+      <div class="absolute inset-0 z-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
+    </div>
+    </EternalShadowBackground>
+    <div class="absolute top-0 w-full h-[200px] bg-linear-to-b from-black via-black to-black/0 "/>
     </div>
 </section>

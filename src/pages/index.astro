@@ -10,7 +10,13 @@ import EnterEnzymes from "@/components/enterEnzymes.astro";
 import ProblemSection from "@/components/ProblemSection.astro";
 import HalogenSection from "@/components/HalogenSection.astro";
 import PartnerSection from "@/components/PartnerSection.astro"
+
+//Components
+import MetalBands from "@/components/MetalBands.astro"
+import FeatureCarusel from "@/components/FeatureCarusel.astro"
 ---
+
+
 
 <Layout title="BioHalo - Landing Page">
 	<main>
@@ -19,8 +25,18 @@ import PartnerSection from "@/components/PartnerSection.astro"
 		</div>
 		
 		<!-- Problem Section -->
-		<div class="relative top-0 left-0 h-[150vh] w-screen flex items-start justify-center overflow-hidden">
+		<div class="relative top-0 left-0 h-full w-screen flex items-start justify-center overflow-hidden">
 			<ProblemSection />
+		</div>
+
+		<!-- Metal Bands Section -->
+		<div class="relative top-0 left-0 h-full w-screen flex items-start justify-center overflow-hidden">
+			<MetalBands />
+		</div>
+
+		<!-- Feature Carousel Section -->
+		<div class="relative top-0 left-0 h-full w-screen flex items-start justify-center overflow-hidden">
+			<FeatureCarusel />
 		</div>
 
 		<!-- Enter Enzymes Section -->
